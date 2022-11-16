@@ -201,7 +201,6 @@ project-list-item and experience-list-item divs have a width of 100% for smaller
 
 /* Small devices (portrait tablets and large phones, 600px screen and up) */
 @media only screen and (max-width: 600px) {
-    /* YOUR CODE HERE */
     div {
         width: 100%;
     }
