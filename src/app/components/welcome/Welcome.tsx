@@ -1,5 +1,6 @@
 import strings from "@components/welcome/strings";
 import styles from "@components/welcome/styles.module.css"
+import AnswerBox from "../answerBox/AnswerBox";
 
 const Welcome = () => {
   return (
@@ -9,12 +10,10 @@ const Welcome = () => {
       </div>
       <div 
         className={styles["enter-password"]}
-        style={{
-          marginTop: '8px',
-        }}
       >
         {strings.enterPassword}
       </div>
+      <AnswerBox />
     </div>
   );
 };

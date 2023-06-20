@@ -8,7 +8,7 @@ const Website = () => {
   return (
     <>
       <HelloEveryone />
-      <Image src="" alt="placeholder for picture" />
+      {/* <Image src="" alt="placeholder for picture" /> */}
       <Welcome />
     </>
   );
