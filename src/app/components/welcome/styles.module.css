@@ -10,6 +10,7 @@
   width: 100%;
   text-align: center;
   animation: transitionIn 2s ease 2s;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 
