@@ -1,0 +1,24 @@
+.intro {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  animation: transitionIn 2s;
+}
+
+.enter-password {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  animation: transitionIn 2s ease 2s;
+  opacity: 0;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

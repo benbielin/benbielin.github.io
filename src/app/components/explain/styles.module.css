@@ -1,0 +1,7 @@
+.explain {
+  display: block;
+  position: absolute;
+  max-width: 100px;
+  font-size: 8px;
+  background-color: gray;
+}

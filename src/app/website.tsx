@@ -2,14 +2,16 @@ import { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import HelloEveryone from "@components/helloEveryone/HelloEveryone";
+import Welcome from "@components/welcome/Welcome";
 
 const Website = () => {
   return (
-    <div>
+    <>
       <HelloEveryone />
       <Image src="" alt="placeholder for picture" />
-    </div>
-  )
+      <Welcome />
+    </>
+  );
 };
 
 export default Website;
