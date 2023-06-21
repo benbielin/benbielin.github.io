@@ -6,9 +6,8 @@ import { KeyboardEvent, useState } from "react";
 const AnswerBox = () => {
   const [isEmpty, setIsEmpty] = useState(true);
 
-  const handleTextChange = (e) => {
+  const handleTextChange = (e: any) => {
     e.preventDefault();
-    e === '' ? setIsEmpty(true) : setIsEmpty(false);
   };
 
   return (
@@ -17,11 +16,15 @@ const AnswerBox = () => {
     >
       <label htmlFor={"password"}></label>
       <input
+        placeholder="Enter password"
         className={styles["password-box"]}
         type={"text"}
         id={"password"}
         onChange={handleTextChange}
       />
+      <button>
+        {"->"}
+      </button>
     </div>
   );
 };
