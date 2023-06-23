@@ -3,7 +3,11 @@
 import styles from "@components/answerBox/styles.module.css";
 import { KeyboardEvent, useState } from "react";
 
-const AnswerBox = () => {
+const AnswerBox = ({
+  handleSubmitPassword,
+}: {
+  handleSubmitPassword: () => void;
+}) => {
   const [isEmpty, setIsEmpty] = useState(true);
 
   const handleTextChange = (e: any) => {
@@ -11,9 +15,7 @@ const AnswerBox = () => {
   };
 
   return (
-    <div
-      className={styles['password-container']}
-    >
+    <div className={styles["password-container"]}>
       <label htmlFor={"password"}></label>
       <input
         placeholder="Enter password"
@@ -22,9 +24,7 @@ const AnswerBox = () => {
         id={"password"}
         onChange={handleTextChange}
       />
-      <button>
-        {"->"}
-      </button>
+      <button onClick={handleSubmitPassword}>{"->"}</button>
     </div>
   );
 };

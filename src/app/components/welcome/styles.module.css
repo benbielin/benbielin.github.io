@@ -15,6 +15,11 @@
   margin-top: 8px;
 }
 
+.password-correct {
+  margin-top: 8px;
+  text-align: center;
+}
+
 @keyframes transitionIn {
   from {
     opacity: 0;

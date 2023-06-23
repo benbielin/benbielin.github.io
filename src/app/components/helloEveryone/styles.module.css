@@ -1,7 +1,6 @@
 .hello-everyone-container {
   display: flex;
   height: 50vh;
-  width: 100vw;
   font-size: 80px;
 }
 
