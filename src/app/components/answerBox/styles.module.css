@@ -2,6 +2,7 @@
   background-color: rgb(64, 64, 64);
   margin: 0 auto;
   text-align: center;
+  width: 20%;
 }
 
 .password-wrapper {
@@ -10,6 +11,13 @@
   opacity: 0;
   margin-top: 8px;
   text-align: center;
+  position: relative;
+  align-items: center;
+}
+
+.submit-button{
+  margin-left: 2px;
+  background-color: #404040;
 }
 
 @keyframes transitionIn {

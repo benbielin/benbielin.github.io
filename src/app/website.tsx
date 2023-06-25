@@ -9,26 +9,15 @@ import Nav from "@components/Nav/Nav";
 
 const Website = () => {
   const [access, setAccess] = useState(false);
-  const [showSidebar, setShowSidebar] = useState(false);
 
   const handlePassword = useCallback(() => {
     setAccess(true);
   }, []);
 
-  const handleScroll = useCallback((e: any) => {
-    const scrollPos = window.scrollY;
-    console.log(scrollPos);
-    if (scrollPos > 300) {
-      setShowSidebar(true);
-    }
-  }, []);
-
-  window.addEventListener('scroll', handleScroll);
-
   return (
     <>
       <Page>
-        <HelloEveryone />
+        <HelloEveryone access={access} />
         {/* <Image src="" alt="placeholder for picture" /> */}
         <Welcome access={access} handleSubmitPassword={handlePassword} />
       </Page>

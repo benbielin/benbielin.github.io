@@ -2,6 +2,7 @@
 
 import styles from "@components/answerBox/styles.module.css";
 import { useState } from "react";
+import classNames from "classnames";
 
 const AnswerBox = ({
   handleSubmitPassword,
@@ -9,11 +10,26 @@ const AnswerBox = ({
   handleSubmitPassword: () => void;
 }) => {
   const [isEmpty, setIsEmpty] = useState(true);
+  const [isHover, setIsHover] = useState(false);
 
   const handleTextChange = (e: any) => {
     e.preventDefault();
     e.target.value === '' ? setIsEmpty(true) : setIsEmpty(false);
   };
+
+  const handleMouseEnter = () => {
+    setIsHover(true);
+  }
+
+  const handleMouseLeave = () => {
+    setIsHover(false);
+  }
+
+  const handleEnter = (e: any) => {
+    if (!isEmpty && e.key === 'Enter') {
+      handleSubmitPassword();
+    }
+  }
 
   return (
     <div className={styles["password-wrapper"]}>
@@ -24,8 +40,20 @@ const AnswerBox = ({
         type={"text"}
         id={"password"}
         onChange={handleTextChange}
+        onKeyDown={handleEnter}
       />
-      <button disabled={isEmpty} onClick={handleSubmitPassword}>{"->"}</button>
+      <button 
+        className={
+          classNames({
+            [styles["submit-button"]] : !isEmpty && isHover,
+          })} 
+        disabled={isEmpty} 
+        onClick={handleSubmitPassword}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {"->"}
+      </button>
     </div>
   );
 };
