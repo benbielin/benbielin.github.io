@@ -1,6 +1,6 @@
-import strings from "@components/welcome/strings";
+import strings from "@/app/components/Welcome/strings";
 import styles from "@components/welcome/styles.module.css";
-import AnswerBox from "../answerBox/AnswerBox";
+import AnswerBox from "../AnswerBox/AnswerBox";
 
 const Welcome = ({
   access,

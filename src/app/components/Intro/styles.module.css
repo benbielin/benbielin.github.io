@@ -1,0 +1,13 @@
+.intro-wrapper {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+}
+
+.intro {
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+}

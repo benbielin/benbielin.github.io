@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "@components/answerBox/styles.module.css";
-import { KeyboardEvent, useState } from "react";
+import { useState } from "react";
 
 const AnswerBox = ({
   handleSubmitPassword,
@@ -12,10 +12,11 @@ const AnswerBox = ({
 
   const handleTextChange = (e: any) => {
     e.preventDefault();
+    e.target.value === '' ? setIsEmpty(true) : setIsEmpty(false);
   };
 
   return (
-    <div className={styles["password-container"]}>
+    <div className={styles["password-wrapper"]}>
       <label htmlFor={"password"}></label>
       <input
         placeholder="Enter password"
@@ -24,7 +25,7 @@ const AnswerBox = ({
         id={"password"}
         onChange={handleTextChange}
       />
-      <button onClick={handleSubmitPassword}>{"->"}</button>
+      <button disabled={isEmpty} onClick={handleSubmitPassword}>{"->"}</button>
     </div>
   );
 };

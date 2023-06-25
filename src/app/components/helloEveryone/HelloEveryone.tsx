@@ -2,16 +2,14 @@
 
 import classNames from "classnames";
 
-import strings from "@components/helloEveryone/strings";
+import strings from "@/app/components/HelloEveryone/strings";
 import styles from "@components/helloEveryone/styles.module.css";
-import { useCallback, useEffect, useState } from "react";
-import Explain from "@components/explain/Explain";
 
 const HelloEveryone = () => {
 
   return (
     <h2
-      className={classNames(styles["hello-everyone-container"])}
+      className={classNames(styles["hello-everyone-wrapper"])}
     >
       <div
         id={"hello-everyone-id"}

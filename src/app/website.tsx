@@ -3,16 +3,29 @@
 import { useCallback, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import HelloEveryone from "@components/helloEveryone/HelloEveryone";
-import Welcome from "@components/welcome/Welcome";
-import Page from "@components/page/Page";
+import HelloEveryone from "@components/HelloEveryone/HelloEveryone";
+import Welcome from "@components/Welcome/Welcome";
+import Page from "@components/Page/Page";
+import Intro from "@components/Intro/Intro";
+import Sidebar from "@components/Sidebar/Sidebar";
 
 const Website = () => {
   const [access, setAccess] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   const handlePassword = useCallback(() => {
     setAccess(true);
   }, []);
+
+  const handleScroll = useCallback((e: any) => {
+    const scrollPos = window.scrollY;
+    console.log(scrollPos);
+    if (scrollPos > 0) {
+      setShowSidebar(true);
+    }
+  }, []);
+
+  window.addEventListener('scroll', handleScroll)
 
   return (
     <>
@@ -23,7 +36,10 @@ const Website = () => {
       </Page>
       {access && (
         <>
-          <Page>{"asdfasdf"}</Page>
+          <Page>
+            <Intro />
+          </Page>
+          {showSidebar && <Sidebar />}
         </>
       )}
     </>

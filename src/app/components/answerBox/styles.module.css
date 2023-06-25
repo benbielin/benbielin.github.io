@@ -4,7 +4,7 @@
   text-align: center;
 }
 
-.password-container {
+.password-wrapper {
   animation: transitionIn 2s ease 4s;
   animation-fill-mode: forwards;
   opacity: 0;
