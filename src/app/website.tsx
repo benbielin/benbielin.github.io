@@ -1,13 +1,11 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import HelloEveryone from "@components/HelloEveryone/HelloEveryone";
 import Welcome from "@components/Welcome/Welcome";
 import Page from "@components/Page/Page";
 import Intro from "@components/Intro/Intro";
-import Sidebar from "@components/Sidebar/Sidebar";
+import Nav from "@components/Nav/Nav";
 
 const Website = () => {
   const [access, setAccess] = useState(false);
@@ -20,12 +18,12 @@ const Website = () => {
   const handleScroll = useCallback((e: any) => {
     const scrollPos = window.scrollY;
     console.log(scrollPos);
-    if (scrollPos > 0) {
+    if (scrollPos > 300) {
       setShowSidebar(true);
     }
   }, []);
 
-  window.addEventListener('scroll', handleScroll)
+  window.addEventListener('scroll', handleScroll);
 
   return (
     <>
@@ -38,8 +36,8 @@ const Website = () => {
         <>
           <Page>
             <Intro />
+            <Nav />
           </Page>
-          {showSidebar && <Sidebar />}
         </>
       )}
     </>

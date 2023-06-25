@@ -1,13 +1,28 @@
 .intro-wrapper {
   margin: 0 auto;
   display: flex;
-  align-items: center;
   text-align: center;
   width: 50%;
+  height: 50%;
+}
+
+.intro-card {
+  display: flex;
+  border-radius: 8px;
+  background-color: #404040;
+  box-shadow: 2px 2px #202020;
+  height: 80%;
+  width: 100%;
 }
 
 .intro {
   margin: 0 auto;
-  text-align: center;
   width: 50%;
+}
+
+.intro-description {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
 }

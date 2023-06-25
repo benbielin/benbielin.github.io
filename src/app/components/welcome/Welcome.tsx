@@ -19,9 +19,10 @@ const Welcome = ({
         <>
           <div className={styles["password-correct"]}>
             {strings.passwordCorrect}
+            {' '}
+            {strings.scrollToSeeMore}
           </div>
           <div className={styles["password-correct"]}>
-            {strings.scrollToSeeMore}
           </div>
         </>
       )}
