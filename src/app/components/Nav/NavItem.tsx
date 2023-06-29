@@ -1,11 +1,10 @@
 "use client";
 
 import styles from "@components/Nav/styles.module.css";
+import Link from "next/link";
 
 const NavItem = ({ text, link }: { text: string; link: string }) => {
-  return <div className={styles["nav-item"]}>
-    {text }
-  </div>;
+  return <Link href={link} className={styles["nav-item"]}>{text}</Link>;
 };
 
 export default NavItem;

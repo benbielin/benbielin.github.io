@@ -1,18 +1,20 @@
+"use client";
+
 import NavItem from "@components/Nav/NavItem";
 import styles from "@components/Nav/styles.module.css";
 
 const items = [
   {
     text: "About",
-    link: "",
+    link: "/about",
   },
   {
     text: "Badminton",
-    link: "",
+    link: "/badminton",
   },
   {
     text: "Cooking",
-    link: "",
+    link: "/cooking",
   },
 ];
 

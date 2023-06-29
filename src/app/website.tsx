@@ -3,7 +3,7 @@
 import { useCallback, useState } from "react";
 import HelloEveryone from "@components/HelloEveryone/HelloEveryone";
 import Welcome from "@components/Welcome/Welcome";
-import Page from "@components/Page/Page";
+import Chunk from "@/app/components/Chunk/Chunk";
 import Intro from "@components/Intro/Intro";
 import Nav from "@components/Nav/Nav";
 
@@ -16,17 +16,17 @@ const Website = () => {
 
   return (
     <>
-      <Page>
+      <Chunk>
         <HelloEveryone access={access} />
         {/* <Image src="" alt="placeholder for picture" /> */}
         <Welcome access={access} handleSubmitPassword={handlePassword} />
-      </Page>
+      </Chunk>
       {access && (
         <>
-          <Page>
+          <Chunk>
             <Intro />
             <Nav />
-          </Page>
+          </Chunk>
         </>
       )}
     </>

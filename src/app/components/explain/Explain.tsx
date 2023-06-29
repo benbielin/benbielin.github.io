@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactNode } from "react";
 import styles from "@components/explain/styles.module.css";
 import classNames from "classnames";
