@@ -13,6 +13,7 @@
   box-shadow: 2px 2px #202020;
   height: 80%;
   width: 100%;
+  min-width: 500px;
 }
 
 .intro {
@@ -25,4 +26,6 @@
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
+  margin: 8px;
+  overflow: auto;
 }

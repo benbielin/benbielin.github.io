@@ -1,0 +1,7 @@
+.back {
+  display: flex;
+  position: fixed;
+  left: 50px;
+  background-color: #808080;
+  border-radius: 12px;
+}

@@ -43,6 +43,10 @@ const AnswerBox = ({
         onKeyDown={handleEnter}
       />
       <button 
+        type={"submit"}
+        style={{
+          marginLeft: "2px",
+        }}
         className={
           classNames({
             [styles["submit-button"]] : !isEmpty && isHover,

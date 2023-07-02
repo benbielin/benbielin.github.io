@@ -1,0 +1,22 @@
+.slider-wrapper {
+  height: 100%;
+}
+
+.slider-track {
+  position: relative;
+  height: 100%;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -16,6 +16,10 @@ const items = [
     text: "Cooking",
     link: "/cooking",
   },
+  {
+    text: "Memes",
+    link: "/memes",
+  },
 ];
 
 const Nav = () => {

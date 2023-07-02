@@ -1,6 +1,7 @@
 .chunk {
+  display: block;
+  align-self: center;
   margin-top: 50px;
   position: relative;
   height: 700px;
-  width: 100vw;
 }
