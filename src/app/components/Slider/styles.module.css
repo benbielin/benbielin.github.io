@@ -1,5 +1,6 @@
 .slider-wrapper {
   height: 100%;
+  width: 100%;
 }
 
 .slider-track {
@@ -7,16 +8,47 @@
   height: 100%;
 }
 
-.left {
+.button-wrapper-left {
+  z-index: 1003;
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  opacity: 0.6;
+  height: 24px;
+  width: 24px;
+  background-color: #202020;
+  border-radius: 50%;
+  margin: 8px;
 }
 
-.right {
+.button-wrapper-right {
+  z-index: 1003;
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  opacity: 0.6;
+  height: 24px;
+  width: 24px;
+  background-color: #202020;
+  border-radius: 50%;
+  margin: 8px;
+}
+
+.button-wrapper-hover {
+ opacity: 0.9;
+}
+
+.slider-item-open {
+  object-fit: contain;
+  
+}
+
+.slider-item {
+  object-fit: cover;
+}
+
+.blur {
+  opacity: 0.1;
 }

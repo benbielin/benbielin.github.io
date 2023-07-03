@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Click from "@components/Click/Click";
 import styles from "@components/Intro/styles.module.css";
 import IntroDescription from "@components/Intro/IntroDescription";
 import Slider from "@components/Slider/Slider";
@@ -9,12 +10,12 @@ import { SliderItemPropsType } from "@/app/types";
 const Intro = () => {
   const sliderCards: Array<SliderItemPropsType> = [
     {
-      imageUrl: "asdf",
-      text: "asdf",
+      imageUrl: "/images/me_0.jpg",
+      text: "me 0",
     },
     {
-      imageUrl: "zxcv",
-      text: "zxcv",
+      imageUrl: "/images/me_1.jpg",
+      text: "me 1",
     },
   ]
 
