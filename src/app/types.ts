@@ -1,4 +1,8 @@
 export type SliderItemPropsType = {
-  imageUrl: string,
+  image: {
+    imageUrl: string,
+    height: number,
+    width: number,
+  }
   text: string,
 };

@@ -7,22 +7,23 @@ import { SliderItemPropsType } from "@/app/types";
 
 import styles from "@components/Slider/styles.module.css";
 
-const Slider = ({ props }: { props: Array<SliderItemPropsType> }) => {
-  const numItems = props.length;
-  const [activeIndex, setActiveIndex] = useState(0);
+const Slider = ({
+  items,
+  open,
+  setOpen,
+  activeIndex,
+  handleRightButton,
+  handleLeftButton,
+}: {
+  items: Array<SliderItemPropsType>;
+  open: boolean;
+  setOpen: () => void;
+  activeIndex: number;
+  handleRightButton: () => void;
+  handleLeftButton: () => void;
+}) => {
+  const numItems = items.length;
   const [mouseIn, setMouseIn] = useState(false);
-  const [sliderOpen, setSliderOpen] = useState(false);
-
-  const handleLeftButton = useCallback(() => {
-    if (activeIndex > 0) {
-      setActiveIndex(activeIndex - 1);
-    }
-  }, [activeIndex, setActiveIndex]);
-  const handleRightButton = useCallback(() => {
-    if (activeIndex < numItems - 1) {
-      setActiveIndex(activeIndex + 1);
-    }
-  }, [activeIndex, setActiveIndex, numItems]);
 
   const handleMouseEnter = useCallback(() => {
     setMouseIn(true);
@@ -32,28 +33,17 @@ const Slider = ({ props }: { props: Array<SliderItemPropsType> }) => {
     setMouseIn(false);
   }, [setMouseIn]);
 
-  const changeSliderOpen = useCallback(() => {
-    setSliderOpen(!sliderOpen);
-  }, [sliderOpen, setSliderOpen]);
-
   return (
     <div className={classNames(styles["slider-wrapper"])}>
       <div className={classNames(styles["slider-track"])}>
-        {props.map((sliderItem: SliderItemPropsType, index: number) => {
+        {items.map((sliderItem: SliderItemPropsType, index: number) => {
           return (
             <>
               {activeIndex === index && (
                 <SliderItem
                   sliderItem={sliderItem}
-                  open={false}
-                  setOpen={changeSliderOpen}
-                />
-              )}
-              {sliderOpen && activeIndex === index && (
-                <SliderItem
-                  sliderItem={sliderItem}
-                  open
-                  setOpen={changeSliderOpen}
+                  open={open}
+                  setOpen={setOpen}
                 />
               )}
             </>

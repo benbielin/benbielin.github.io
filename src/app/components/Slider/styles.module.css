@@ -40,15 +40,25 @@
  opacity: 0.9;
 }
 
-.slider-item-open {
+.image-open {
   object-fit: contain;
-  
 }
 
-.slider-item {
+.image {
   object-fit: cover;
 }
 
-.blur {
-  opacity: 0.1;
+.slider-item-open {
+  z-index: 1030;
+  display: flex;
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  background-color: #202020;
+  align-items: center;
+}
+
+.slider-item {
+
 }
