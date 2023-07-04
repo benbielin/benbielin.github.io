@@ -6,6 +6,8 @@ import { SliderItemPropsType } from "@/app/types";
 
 import IntroDescription from "@components/Intro/IntroDescription";
 import Slider from "@components/Slider/Slider";
+import { useScrollLock } from "@hooks/useScrollLock";
+
 
 import styles from "@components/Intro/styles.module.css";
 
@@ -14,16 +16,16 @@ const Intro = () => {
     {
       image: {
         imageUrl: "/images/me_0.jpg",
-        height: 603.2,
-        width: 921.6
+        height: 852,
+        width: 640,
       },
       text: "me 0",
     },
     {
       image:{
         imageUrl: "/images/me_1.jpg",
-        height: 603.2,
-        width: 921.6,
+        height: 852,
+        width: 640,
       },
       text: "me 1",
     },
@@ -34,9 +36,12 @@ const Intro = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [open, setOpen] = useState(false);
 
+  const handleLock = useScrollLock();
+
   const handleOpenChange = useCallback(() => {
+    handleLock(!open);
     setOpen(!open);
-  }, [open, setOpen]) 
+  }, [open, setOpen, handleLock]) 
 
   const handleLeftButton = useCallback(() => {
     if (activeIndex > 0) {

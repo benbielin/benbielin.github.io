@@ -1,8 +1,9 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useMemo } from "react";
 import { SliderItemPropsType } from "@/app/types";
 import Click from "@components/Click/Click";
+import { OPEN_RATIO, OPEN_HEIGHT, OPEN_WIDTH } from "@components/Slider/Slider";
 import Image from "next/image";
 import classNames from "classnames";
 import styles from "@components/Slider/styles.module.css";
@@ -16,30 +17,31 @@ const SliderItem = ({
   open: boolean;
   setOpen?: () => void;
 }) => {
-  const openHeight: number = window.innerHeight * 0.8;
-  const openWidth: number = window.innerWidth * 0.6;
-  const openRatio = openHeight / openWidth;
-
   const height = sliderItem.image.height;
   const width = sliderItem.image.width;
   const aspectRatio = height / width;
 
   const renderHeight =
-    aspectRatio > openRatio ? openHeight : (height / width) * openWidth;
+    aspectRatio > OPEN_RATIO ? OPEN_HEIGHT : (height / width) * OPEN_WIDTH;
   const renderWidth =
-    aspectRatio > openRatio ? (width / height) * openHeight : openWidth;
+    aspectRatio > OPEN_RATIO ? (width / height) * OPEN_HEIGHT : OPEN_WIDTH;
+
+  const CLICK_STYLES = useMemo(() => {
+    return open ? {
+      height: "fit-content",
+      width: "fit-content",
+    } : {
+      height: "100%",
+      width: "100%",
+    }
+  }, [open])
 
   return (
-    <div
-      className={classNames(
-        open ? styles["slider-item-open"] : styles["slider-item"]
-      )}
-      style={{
-        height: open ? openHeight : "100%",
-        width: open ? openWidth : "100%",
-      }}
-    >
-      <Click handleOnClick={setOpen}>
+      <Click 
+        handleOnClick={!open ? setOpen : undefined}
+        pointer={!open}
+        style={CLICK_STYLES}
+      >
         <Image
           className={classNames(open ? styles["image-open"] : styles["image"])}
           src={sliderItem.image.imageUrl}
@@ -49,7 +51,6 @@ const SliderItem = ({
           width={open ? renderWidth : undefined}
         />
       </Click>
-    </div>
   );
 };
 

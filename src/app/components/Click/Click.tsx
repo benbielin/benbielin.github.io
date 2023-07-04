@@ -6,11 +6,15 @@ import classNames from "classnames";
 import styles from "@components/Click/styles.module.css";
 
 const Click = ({
-  handleOnClick,
   children,
+  handleOnClick,
+  pointer,
+  style,
 }: {
-  handleOnClick?: () => void;
   children: ReactNode;
+  handleOnClick?: () => void;
+  pointer: boolean;
+  style? : object;
 }) => {
   const [mouseIn, setMouseIn] = useState(false);
 
@@ -24,8 +28,9 @@ const Click = ({
 
   return (
     <div
+      style={style}
       className={classNames(styles["click"], {
-        [styles["click-mouse-in"]]: mouseIn,
+        [styles["click-mouse-in"]]: mouseIn && pointer,
       })}
       onClick={handleOnClick}
       onMouseEnter={handleMouseEnter}

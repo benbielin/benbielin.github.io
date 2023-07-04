@@ -7,6 +7,10 @@ import { SliderItemPropsType } from "@/app/types";
 
 import styles from "@components/Slider/styles.module.css";
 
+export const OPEN_HEIGHT: number = window.innerHeight * 0.8;
+export const OPEN_WIDTH: number = window.innerWidth * 0.6;
+export const OPEN_RATIO = OPEN_HEIGHT / OPEN_WIDTH;
+
 const Slider = ({
   items,
   open,
@@ -23,6 +27,7 @@ const Slider = ({
   handleLeftButton: () => void;
 }) => {
   const numItems = items.length;
+
   const [mouseIn, setMouseIn] = useState(false);
 
   const handleMouseEnter = useCallback(() => {
@@ -34,7 +39,15 @@ const Slider = ({
   }, [setMouseIn]);
 
   return (
-    <div className={classNames(styles["slider-wrapper"])}>
+    <div
+      className={classNames(
+        open ? styles["slider-item-open"] : styles["slider-item"]
+      )}
+      style={{
+        height: open ? OPEN_HEIGHT : "100%",
+        width: open ? OPEN_WIDTH : "100%",
+      }}
+    >
       <div className={classNames(styles["slider-track"])}>
         {items.map((sliderItem: SliderItemPropsType, index: number) => {
           return (
@@ -51,35 +64,50 @@ const Slider = ({
         })}
         {activeIndex > 0 && (
           <div
-            className={classNames(styles["button-wrapper-left"], {
-              [styles["button-wrapper-hover"]]: mouseIn,
-            })}
+            className={classNames(
+              open
+                ? styles["button-wrapper-left-open"]
+                : styles["button-wrapper-left"],
+              {
+                [styles["button-wrapper-hover"]]: mouseIn,
+              }
+            )}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <button
-              className={styles["left"]}
-              type={"button"}
-              onClick={handleLeftButton}
-            >
+            <button type={"button"} onClick={handleLeftButton}>
               {"<-"}
             </button>
           </div>
         )}
         {activeIndex < numItems - 1 && (
           <div
-            className={classNames(styles["button-wrapper-right"], {
+            className={classNames(
+              open
+                ? styles["button-wrapper-right-open"]
+                : styles["button-wrapper-right"],
+              {
+                [styles["button-wrapper-hover"]]: mouseIn,
+              }
+            )}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <button type={"button"} onClick={handleRightButton}>
+              {"->"}
+            </button>
+          </div>
+        )}
+        {open && (
+          <div
+            className={classNames(styles["close-button-wrapper"], {
               [styles["button-wrapper-hover"]]: mouseIn,
             })}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <button
-              className={styles["right"]}
-              type={"button"}
-              onClick={handleRightButton}
-            >
-              {"->"}
+            <button type={"button"} onClick={setOpen}>
+              {'x'}
             </button>
           </div>
         )}
