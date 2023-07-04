@@ -47,6 +47,7 @@ const SliderItem = ({
           src={sliderItem.image.imageUrl}
           alt={sliderItem.text}
           fill={!open}
+          sizes={!open ? "100%" : undefined}
           height={open ? renderHeight : undefined}
           width={open ? renderWidth : undefined}
         />

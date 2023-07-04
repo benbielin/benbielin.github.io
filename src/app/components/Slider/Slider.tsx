@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useCallback, useState } from "react";
+import { Fragment, ReactNode, useCallback, useState } from "react";
 import classNames from "classnames";
 import SliderItem from "@components/Slider/SliderItem";
 import { SliderItemPropsType } from "@/app/types";
@@ -38,6 +38,16 @@ const Slider = ({
     setMouseIn(false);
   }, [setMouseIn]);
 
+  const handleRightButtonClick = useCallback(() => {
+    handleRightButton();
+    setMouseIn(false);
+  }, [handleRightButton, setMouseIn]);
+
+  const handleLeftButtonClick = useCallback(() => {
+    handleLeftButton();
+    setMouseIn(false);
+  }, [handleLeftButton, setMouseIn]);
+  
   return (
     <div
       className={classNames(
@@ -51,7 +61,7 @@ const Slider = ({
       <div className={classNames(styles["slider-track"])}>
         {items.map((sliderItem: SliderItemPropsType, index: number) => {
           return (
-            <>
+            <Fragment key={sliderItem.image.imageUrl}>
               {activeIndex === index && (
                 <SliderItem
                   sliderItem={sliderItem}
@@ -59,7 +69,7 @@ const Slider = ({
                   setOpen={setOpen}
                 />
               )}
-            </>
+            </Fragment>
           );
         })}
         {activeIndex > 0 && (
@@ -75,7 +85,7 @@ const Slider = ({
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <button type={"button"} onClick={handleLeftButton}>
+            <button type={"button"} onClick={handleLeftButtonClick}>
               {"<-"}
             </button>
           </div>
@@ -93,7 +103,7 @@ const Slider = ({
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <button type={"button"} onClick={handleRightButton}>
+            <button type={"button"} onClick={handleRightButtonClick}>
               {"->"}
             </button>
           </div>
@@ -101,13 +111,16 @@ const Slider = ({
         {open && (
           <div
             className={classNames(styles["close-button-wrapper"], {
-              [styles["button-wrapper-hover"]]: mouseIn,
+              [styles["close-button-hover"]]: mouseIn,
             })}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <button type={"button"} onClick={setOpen}>
-              {'x'}
+            <button type={"button"} onClick={setOpen} style={{
+              margin: "0 auto",
+              fontSize: "16px",
+            }}>
+              {'X'}
             </button>
           </div>
         )}

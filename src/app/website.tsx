@@ -17,7 +17,7 @@ const Website = () => {
   return (
     <>
       <Chunk>
-        <HelloEveryone access={access} />
+        <HelloEveryone />
         {/* <Image src="" alt="placeholder for picture" /> */}
         <Welcome access={access} handleSubmitPassword={handlePassword} />
       </Chunk>

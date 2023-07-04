@@ -5,13 +5,13 @@ import classNames from "classnames";
 import strings from "@/app/components/HelloEveryone/strings";
 import styles from "@components/helloEveryone/styles.module.css";
 
-const HelloEveryone = ({ access }: { access: boolean }) => {
+const HelloEveryone = () => {
   return (
     <h2 className={classNames(styles["hello-everyone-wrapper"])}>
       <div
         id={"hello-everyone-id"}
         className={classNames(styles["hello-everyone"])}
-        title={access ? strings.explain : undefined}
+        title={strings.explain}
       >
         {strings.helloEveryone}
       </div>
