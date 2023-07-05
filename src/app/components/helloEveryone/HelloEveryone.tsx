@@ -9,7 +9,6 @@ const HelloEveryone = () => {
   return (
     <h2 className={classNames(styles["hello-everyone-wrapper"])}>
       <div
-        id={"hello-everyone-id"}
         className={classNames(styles["hello-everyone"])}
         title={strings.explain}
       >

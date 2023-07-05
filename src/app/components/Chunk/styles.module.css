@@ -3,5 +3,5 @@
   align-self: center;
   margin-top: 50px;
   position: relative;
-  height: 700px;
+  height: fit-content;
 }
