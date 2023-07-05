@@ -6,3 +6,8 @@ export type SliderItemPropsType = {
   }
   text: string,
 };
+
+export type InfoCardPropsType =  {
+  title: string,
+  description: string[],
+}
