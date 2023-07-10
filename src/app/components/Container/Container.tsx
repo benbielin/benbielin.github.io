@@ -12,7 +12,7 @@ const Container = ({ children }: { children: ReactNode }) => {
         borderRadius: "12px",
         padding: "50px auto",
         margin: "20px auto",
-        backgroundColor: "#202020",
+        backgroundColor: "#181818",
       }}
     >
       {children}

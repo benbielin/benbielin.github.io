@@ -1,15 +1,21 @@
 .info-card-container {
   text-align: center;
-  padding: 12px;
+  padding: 14px;
   margin: 8px;
   background-color: #dda0a0;
   color: #000000;
   border-radius: 12px;
-  height: 350px;
-  width: 280px;
+  height: 320px;
+  width: 30%;
+  min-width: 200px;
+  overflow: auto;
 }
 
 .info-card-container:hover {
-  background-color: #ff0000;
+  background-color: #bb0000;
   color: #ffffff;
+}
+
+.info-card-title {
+  margin-bottom: 8px;
 }

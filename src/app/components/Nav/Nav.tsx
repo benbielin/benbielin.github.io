@@ -1,6 +1,6 @@
 "use client";
 
-import { items } from "@/app/data/data";
+import { navBarItems } from "@/app/data/data";
 
 import NavItem from "@components/Nav/NavItem";
 import styles from "@components/Nav/styles.module.css";
@@ -9,7 +9,7 @@ const Nav = () => {
   return (
     <div className={styles["nav-wrapper"]}>
       <div className={styles["nav-content"]}>
-        {items.map((item) => {
+        {navBarItems.map((item) => {
           return <NavItem key={item.text} text={item.text} link={item.link} />;
         })}
       </div>

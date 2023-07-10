@@ -1,6 +1,6 @@
 "use client";
 
-import { items } from "@/app/data/data";
+import { navBarItems } from "@/app/data/data";
 
 import Link from "next/link";
 
@@ -19,7 +19,7 @@ const NavBar = () => {
         borderBottomRightRadius: "12px",
       }}
     >
-      {items.map((item) => {
+      {navBarItems.map((item) => {
         return (
           <div
             key={item.text}

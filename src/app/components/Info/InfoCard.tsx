@@ -7,7 +7,9 @@ const InfoCard = ({infoCard}:{infoCard: InfoCardPropsType}) => {
     <div
       className={styles['info-card-container']}
     >
+      <div className={styles['info-card-title']}>
       {infoCard.title}
+      </div>
       <ul
         style={{
           fontSize: "12px",

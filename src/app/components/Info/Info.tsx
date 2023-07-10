@@ -11,8 +11,9 @@ const Info = ({ props }: { props: InfoPropsType }) => {
       style={{
         textAlign: "center",
         border: "4px solid #ff8e8e",
+        backgroundColor: "#242424",
         borderRadius: "12px",
-        margin: "8px 12px 8px 12px",
+        margin: "2px 36px 0px 36px",
       }}
     >
       {props.title}
