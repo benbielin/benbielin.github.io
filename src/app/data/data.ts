@@ -122,7 +122,9 @@ const infoCardsExperienceCDSS: InfoRowPropsType = {
       title: "Data 140 Course Staff",
       descriptions: [
         "January 2023 - May 2023",
-        "Data 140 is an upper division probability course for data science majors at UC Berkeley. I really enjoy probability and statistics, and this teaching this course was really fun!",
+        "Data 140 is an upper division probability course for data science majors\
+         at UC Berkeley. I really enjoy probability and statistics, and this \
+         teaching this course was really fun!",
       ],
     },
   ],
@@ -138,7 +140,8 @@ const infoCardsExperienceEECS: InfoRowPropsType = {
         "June 2023 - August 2023",
         "CS 70 is a lower division prerequisite to the CS major at UC Berkeley",
         "The course teaches both discrete math and probability.",
-        "Interestingly, I never took this course, as I took discrete math in the math department and probability in the data science college.",
+        "Interestingly, I never took this course, as I took discrete math in the \
+        math department and probability in the data science college.",
         "Teaching this course made me realize what I missed :(",
       ],
     },
@@ -146,10 +149,14 @@ const infoCardsExperienceEECS: InfoRowPropsType = {
       title: "CS 61A Academic Intern",
       descriptions: [
         "June 2022 - August 2022",
-        "CS 61A is usually a prospective CS major's first computer science course at UC Berkeley!",
-        "The course teaches fundamentals of programming such as functions and recursion.",
-        "It was one of my favorite courses at UC Berkeley! I really enjoyed the way the course taught me how to code.",
-        "Unfortunately, I don't have enough units to be an academic intern each semester, which is why I decided to contribute via CSM.",
+        "CS 61A is usually a prospective CS major's first computer science course \
+        at UC Berkeley!",
+        "The course teaches fundamentals of programming such as functions and \
+        recursion.",
+        "It was one of my favorite courses at UC Berkeley! I really enjoyed the \
+        way the course taught me how to code.",
+        "Unfortunately, I don't have enough units to be an academic intern each \
+        semester, which is why I decided to contribute via CSM.",
       ],
     },
   ],
@@ -160,15 +167,29 @@ const infoCardsExperienceCSM: InfoRowPropsType = {
   infoCards: [
     {
       title: "CS 61A Senior Associate Mentor",
-      descriptions: [""],
+      descriptions: [
+        "August 2023 - December 2023",
+        "This semester, I will be taking more of a leadership \
+        role.",
+        "I hope that I can help other aspiring mentors on their \
+        journey of teaching CS 61A.",
+      ],
     },
     {
       title: "CS 61A Associate Mentor",
-      descriptions: ["bruh"],
+      descriptions: [
+        "January 2023 - May 2023",
+        "I took a more independent role, and also changed from \
+        teaching 1 hour a week to 2 hours a week. I improved my \
+        teaching and my understanding of the material!",
+        "I changed the time to 5-6pm on Tuesdays and Thursdays, \
+        and students actually showed up!",
+      ],
     },
     {
       title: "CS 61A Junior Mentor",
       descriptions: [
+        "August 2022 - December 2022",
         "I decided to start teaching CS 61A in CSM because I \
         didn't have to enroll in a unit to do so.",
         "CSM is incredible. It allows undergraduate students \
@@ -205,7 +226,7 @@ const infoCardsProjectsSchool: InfoRowPropsType = {
         "I coded this project in C, and I added fault \
         tolerance in the case of workers that failed.",
         "Future goals involve completing this project in \
-        Rust!"
+        Rust!",
       ],
     },
     {
@@ -219,7 +240,7 @@ const infoCardsProjectsSchool: InfoRowPropsType = {
         system calls, \
         a fast file system, and a cache.",
         "Entire project was coded in C, with some x86 assembly",
-        "Future goals involve adding interaction with device drivers."
+        "Future goals involve adding interaction with device drivers.",
       ],
     },
     {
@@ -257,7 +278,7 @@ const infoCardsProjectsSchool: InfoRowPropsType = {
         "Future goals involve trying to write more tests and fixing \
         insecure parts of this project.",
         "Since I enjoyed this project a lot, I plan on also redoing \
-        this project from scratch!"
+        this project from scratch!",
       ],
     },
     {

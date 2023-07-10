@@ -8,7 +8,7 @@ const Back = () => {
     <div className={styles["back"]}>
       <Link style={{
         margin: "8px",
-      }} href={"/"}>{"<- Back to home page"}</Link>
+      }} href={"/"}>{"<- Back to home"}</Link>
     </div>
   );
 };
