@@ -1,4 +1,8 @@
-import { infoCards } from "@/app/data/data";
+'use client';
+
+import { infoCardsEducation, infoCardsExperience, infoCardsProjects } from "@/app/data/data";
+
+import { useState } from "react";
 
 import Image from "next/image";
 
@@ -37,11 +41,14 @@ export default function Page() {
         <h2 style={{
           textAlign: 'center',
           fontSize: '24px',
+          marginBottom: '12px',
         }}>
           Ben Bielin
         </h2>
         {/* <Alert text={"test"}/> */}
-        <Info infoCards={infoCards} title={"Education"}/>
+        <Info props={infoCardsEducation} />
+        <Info props={infoCardsExperience}/>
+        <Info props={infoCardsProjects} />
       </Chunk>
     </Container>
   );

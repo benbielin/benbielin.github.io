@@ -9,5 +9,15 @@ export type SliderItemPropsType = {
 
 export type InfoCardPropsType =  {
   title: string,
-  description: string[],
+  descriptions: string[],
+}
+
+export type InfoRowPropsType = {
+  title: string,
+  infoCards: InfoCardPropsType[],
+}
+
+export type InfoPropsType = {
+  title: string,
+  infoRows: InfoRowPropsType[],
 }

@@ -1,0 +1,15 @@
+.info-card-container {
+  text-align: center;
+  padding: 12px;
+  margin: 8px;
+  background-color: #dda0a0;
+  color: #000000;
+  border-radius: 12px;
+  height: 350px;
+  width: 280px;
+}
+
+.info-card-container:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
