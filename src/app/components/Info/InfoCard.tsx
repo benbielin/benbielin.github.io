@@ -5,7 +5,7 @@ import styles from "@components/Info/styles.module.css";
 const InfoCard = ({infoCard}:{infoCard: InfoCardPropsType}) => {
   return (
     <div
-      className={styles['info-card-container']}
+      className={styles['info-card-wrapper']}
     >
       <div className={styles['info-card-title']}>
       {infoCard.title}

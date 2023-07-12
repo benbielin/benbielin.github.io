@@ -1,4 +1,4 @@
-.info-card-container {
+.info-card-wrapper {
   text-align: center;
   padding: 14px;
   margin: 8px;
@@ -11,7 +11,7 @@
   overflow: auto;
 }
 
-.info-card-container:hover {
+.info-card-wrapper:hover {
   background-color: #bb0000;
   color: #ffffff;
 }
