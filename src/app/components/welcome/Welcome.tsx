@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import strings from "@/app/components/Welcome/strings";
 import styles from "@components/welcome/styles.module.css";
@@ -16,16 +16,16 @@ const Welcome = ({
       <div className={styles["intro"]}>{strings.intro}</div>
       <div className={styles["enter-password"]}>{strings.enterPassword}</div>
       {!access ? (
-        <AnswerBox handleSubmitPassword={handleSubmitPassword} />
+        <>
+          <AnswerBox handleSubmitPassword={handleSubmitPassword} />
+          <div className={styles["hint"]}>{"(Hint: Just try something! Maybe its correct!)"}</div>
+        </>
       ) : (
         <>
           <div className={styles["password-correct"]}>
-            {strings.passwordCorrect}
-            {' '}
-            {strings.scrollToSeeMore}
+            {strings.passwordCorrect} {strings.scrollToSeeMore}
           </div>
-          <div className={styles["password-correct"]}>
-          </div>
+          <div className={styles["password-correct"]}></div>
         </>
       )}
     </div>

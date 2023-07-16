@@ -14,22 +14,22 @@ const AnswerBox = ({
 
   const handleTextChange = (e: any) => {
     e.preventDefault();
-    e.target.value === '' ? setIsEmpty(true) : setIsEmpty(false);
+    e.target.value === "" ? setIsEmpty(true) : setIsEmpty(false);
   };
 
   const handleMouseEnter = () => {
     setIsHover(true);
-  }
+  };
 
   const handleMouseLeave = () => {
     setIsHover(false);
-  }
+  };
 
   const handleEnter = (e: any) => {
-    if (!isEmpty && e.key === 'Enter') {
+    if (!isEmpty && e.key === "Enter") {
       handleSubmitPassword();
     }
-  }
+  };
 
   return (
     <div className={styles["password-wrapper"]}>
@@ -42,16 +42,15 @@ const AnswerBox = ({
         onChange={handleTextChange}
         onKeyDown={handleEnter}
       />
-      <button 
+      <button
         type={"submit"}
         style={{
           marginLeft: "2px",
         }}
-        className={
-          classNames({
-            [styles["submit-button"]] : !isEmpty && isHover,
-          })} 
-        disabled={isEmpty} 
+        className={classNames({
+          [styles["submit-button"]]: !isEmpty && isHover,
+        })}
+        disabled={isEmpty}
         onClick={handleSubmitPassword}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

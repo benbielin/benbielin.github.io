@@ -21,3 +21,12 @@ export type InfoPropsType = {
   title: string,
   infoRows: InfoRowPropsType[],
 }
+
+export type MemeListPropsType = {
+  definition: string,
+  text: {
+    times: string[],
+    strikes: string[],
+    other: string[],
+  },
+}

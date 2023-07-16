@@ -1,4 +1,4 @@
-import { InfoPropsType, InfoRowPropsType } from "../types";
+import { InfoPropsType, InfoRowPropsType, MemeListPropsType } from "../types";
 
 export const navBarItems = [
   {
@@ -410,3 +410,12 @@ export const infoCardsProjects: InfoPropsType = {
   title: "PROJECTS",
   infoRows: [infoCardsProjectsPersonal, infoCardsProjectsSchool],
 };
+
+export const memeListDailySchedule: MemeListPropsType = {
+  definition: "daily schedule",
+  text: [
+   /**
+    * TODO: use segment tree
+    */
+  ]
+}

@@ -10,12 +10,11 @@ import { useState } from "react";
 
 import Image from "next/image";
 
-import Alert from "@components/Alert/Alert";
 import Back from "@components/Back/back";
 import Chunk from "@components/Chunk/Chunk";
 import Container from "@components/Container/Container";
-import NavBar from "@components/NavBar/NavBar";
 import Info from "@components/Info/Info";
+import NavBar from "@components/NavBar/NavBar";
 
 export default function Page() {
   return (
@@ -31,7 +30,6 @@ export default function Page() {
             height: "128px",
             width: "128px",
             borderRadius: "50%",
-
           }}
         >
           <Image
@@ -56,11 +54,13 @@ export default function Page() {
         </h2>
         <div
           style={{
-            margin: '2px 36px 0px 36px',
+            margin: "2px 36px 0px 36px",
             textAlign: "center",
           }}
         >
-          {"Hello everyone! My name is Ben, and I'm an undergraduate student at UC Berkeley studying computer science, data science, and applied mathematics! I want to learn a wide range of subjects, but my main interests as of now are statistics, mathematics, full stack development, and data science. I also enjoy teaching and am always interested in ways to be a better instructor. My hobbies are badminton, cooking, and playing the ukulele."}
+          {
+            "Hello everyone! My name is Ben, and I'm an undergraduate student at UC Berkeley studying computer science, data science, and applied mathematics! I want to learn a wide range of subjects, but my main interests as of now are statistics, mathematics, full stack development, and data science. I also enjoy teaching and am always interested in ways to be a better instructor. My hobbies are badminton, cooking, and playing the ukulele."
+          }
         </div>
         {/* <Alert text={"test"}/> */}
         <Info props={infoCardsEducation} />
