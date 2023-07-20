@@ -22,11 +22,12 @@ export type InfoPropsType = {
   infoRows: InfoRowPropsType[],
 }
 
+export type MemeText = {
+  text: string,
+  substringArray: number[]
+}
+
 export type MemeListPropsType = {
   definition: string,
-  text: {
-    times: string[],
-    strikes: string[],
-    other: string[],
-  },
+  textList: MemeText[]
 }

@@ -413,9 +413,63 @@ export const infoCardsProjects: InfoPropsType = {
 
 export const memeListDailySchedule: MemeListPropsType = {
   definition: "daily schedule",
-  text: [
-   /**
-    * TODO: use segment tree
-    */
-  ]
+  textList: [
+    {
+      text: "7:00am: Wake up",
+      substringArray: [8, 15],
+    },
+    {
+      text: "8:00am: Wake up",
+      substringArray: [8, 15],
+    },
+    {
+      text: "9:00am: Wake up",
+      substringArray: [15],
+    },
+    {
+      text: "10:00am: Go to lecture Skip lecture and watch it later don't watch it later because I'm lazy",
+      substringArray: [9, 22, 40, 54, 92],
+    },
+    {
+      text: "12:00am: Eat lunch breakfast",
+      substringArray: [13, 18, 29],
+    },
+    {
+      text: "1:00pm: Go to lecture Skip lecture because I already gave up at this point",
+      substringArray: [8, 21, 74],
+    },
+    {
+      text: "3:00pm: Go to gym to try to compensate for lack of masculinity",
+      substringArray: [62],
+    },
+    {
+      text: "5:00pm: Cook food Waste money on fast food",
+      substringArray: [8, 17, 42],
+    },
+    {
+      text: "6:00pm: Study Waste time playing video games",
+      substringArray: [8, 13, 44],
+    },
+    {
+      text: "8:00pm: Study Waste time on YouTube",
+      substringArray: [8, 13, 35],
+    },
+    {
+      text: "10:00pm: Study Yeah let's be real I'm not studying",
+      substringArray: [9, 14, 50],
+    },
+    {
+      text: "12:00am: Go to sleep",
+      substringArray: [9, 20]
+    },
+    {
+      text: "1:00am: Go to sleep",
+      substringArray: [8, 19]
+    },
+    {
+      text: "2:00am: Go to sleep",
+      substringArray: [19]
+    },
+    
+  ],
 }
