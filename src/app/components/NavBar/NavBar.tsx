@@ -8,26 +8,10 @@ import styles from "@components/NavBar/styles.module.css";
 
 const NavBar = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        marginLeft: "45%",
-        marginRight: "5%",
-        alignItems: "center",
-        backgroundColor: "#404040",
-        borderBottomLeftRadius: "12px",
-        borderBottomRightRadius: "12px",
-      }}
-    >
+    <div className={styles["navbar-wrapper"]}>
       {navBarItems.map((item) => {
         return (
-          <div
-            key={item.text}
-            style={{
-              display: "flex",
-              margin: "0 auto",
-            }}
-          >
+          <div key={item.text} className={styles["navbar-item-wrapper"]}>
             <Link href={item.link} className={styles["navbar-item"]}>
               {item.text}
             </Link>
