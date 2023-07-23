@@ -1,15 +1,16 @@
 .alert-wrapper {
   display: flex;
   position: fixed;
-  top: 50px;
+  top: 75px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ff8e8e;
   text-align: center;
+  align-items: center;
+  background-color: #ff8e8e;
   border-radius: 12px;
-  width: 35%;
   z-index: 10;
   color: #000000;
+  padding: 8px;
 }
 
 .alert-text {
@@ -20,15 +21,16 @@
 
 .alert-button-wrapper {
   display: flex;
-  position: absolute;
-  right: 16px;
   align-items: center;
-  height: 100%;
+  border-radius: 50%;
+  background-color: #808080;
+  height: 24px;
+  width: 24px;
 }
 
 .alert-button {
+  margin: 0 auto;
   display: flex;
   font-size: 20px;
-  vertical-align: middle;
 }
 
