@@ -2,7 +2,7 @@
 
 import strings from "@/app/components/welcome/strings";
 import styles from "@components/welcome/styles.module.css";
-import AnswerBox from "../AnswerBox/AnswerBox";
+import AnswerBox from "@/app/components/answerBox/AnswerBox";
 
 const Welcome = ({
   access,
