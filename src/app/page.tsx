@@ -1,17 +1,34 @@
+import { useCallback, useState } from "react";
+
 import MainContainer from "@/app/components/MainContainer/MainContainer";
-import Website from "@/app/website";
-
-
-function getWebsite() {
-  return <Website/>;
-}
-
-const website = getWebsite();
+import HelloEveryone from "./components/helloEveryone/HelloEveryone";
+import Welcome from "@components/Welcome/Welcome";
+import Chunk from "@components/Chunk/Chunk";
+import Container from "@components/Container/Container";
+import Intro from "@components/Intro/Intro";
+import Nav from "@components/Nav/Nav";
 
 export default function Home() {
+  const [access, setAccess] = useState(false);
+
+  const handlePassword = useCallback(() => {
+    setAccess(true);
+  }, []);
   return (
     <MainContainer>
-      {website}
+      <Container>
+        <Chunk>
+          <HelloEveryone />
+          {/* <Image src="" alt="placeholder for picture" /> */}
+          <Welcome access={access} handleSubmitPassword={handlePassword} />
+        </Chunk>
+        {access && (
+          <Chunk>
+            <Intro />
+            <Nav />
+          </Chunk>
+        )}
+      </Container>
     </MainContainer>
   );
 }
