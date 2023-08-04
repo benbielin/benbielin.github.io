@@ -2,9 +2,9 @@
 
 import { useCallback, useState } from "react";
 
-import MainContainer from "./components/MainContainer/MainContainer";
+import MainContainer from "./components/mainContainer/MainContainer";
 import HelloEveryone from "./components/helloEveryone/HelloEveryone";
-import Welcome from "./components/Welcome/Welcome";
+import Welcome from "./components/welcome/Welcome";
 import Chunk from "@components/Chunk/Chunk";
 import Container from "@components/Container/Container";
 import Intro from "@components/Intro/Intro";

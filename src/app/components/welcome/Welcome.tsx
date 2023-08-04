@@ -1,6 +1,6 @@
 "use client";
 
-import strings from "@/app/components/Welcome/strings";
+import strings from "@/app/components/welcome/strings";
 import styles from "@components/welcome/styles.module.css";
 import AnswerBox from "../AnswerBox/AnswerBox";
 
