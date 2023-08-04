@@ -1,14 +1,14 @@
 "use client";
 
-import { Fragment, ReactNode, useCallback, useState } from "react";
+import { Fragment, useCallback, useState } from "react";
 import classNames from "classnames";
 import SliderItem from "@components/Slider/SliderItem";
 import { SliderItemPropsType } from "@/app/types";
 
 import styles from "@components/Slider/styles.module.css";
 
-export const OPEN_HEIGHT: number = window.innerHeight * 0.8;
-export const OPEN_WIDTH: number = window.innerWidth * 0.6;
+export const OPEN_HEIGHT: number = 600;
+export const OPEN_WIDTH: number = 800;
 export const OPEN_RATIO = OPEN_HEIGHT / OPEN_WIDTH;
 
 const Slider = ({
