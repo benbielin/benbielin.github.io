@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import HelloEveryone from "@components/HelloEveryone/HelloEveryone";
+import HelloEveryone from "@components/helloEveryone/helloEveryone";
 import Welcome from "@components/Welcome/Welcome";
 import Chunk from "@components/Chunk/Chunk";
 import Container from "@components/Container/Container";

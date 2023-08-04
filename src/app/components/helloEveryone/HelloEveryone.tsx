@@ -2,8 +2,8 @@
 
 import classNames from "classnames";
 
-import strings from "@/app/components/HelloEveryone/strings";
-import styles from "@components/HelloEveryone/styles.module.css";
+import strings from "@/app/components/helloEveryone/strings";
+import styles from "@components/helloEveryone/styles.module.css";
 
 const HelloEveryone = () => {
   return (
