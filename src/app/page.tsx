@@ -1,3 +1,5 @@
+"use client";
+
 import { useCallback, useState } from "react";
 
 import MainContainer from "@/app/components/MainContainer/MainContainer";
