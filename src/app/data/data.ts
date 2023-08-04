@@ -14,6 +14,10 @@ export const navBarItems = [
     link: "/cooking",
   },
   {
+    text: "Math App",
+    link: "/math-app",
+  },
+  {
     text: "Memes",
     link: "/memes",
   },
