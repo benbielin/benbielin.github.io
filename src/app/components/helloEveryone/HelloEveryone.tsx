@@ -3,7 +3,7 @@
 import classNames from "classnames";
 
 import strings from "@/app/components/HelloEveryone/strings";
-import styles from "@components/helloEveryone/styles.module.css";
+import styles from "@components/HelloEveryone/styles.module.css";
 
 const HelloEveryone = () => {
   return (
