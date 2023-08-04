@@ -1,4 +1,4 @@
-import MainContainer from "@components/MainContainer/MainContainer";
+import MainContainer from "@/app/components/MainContainer/MainContainer";
 import Website from "@/app/website";
 
 
